@@ -1,0 +1,660 @@
+Question: 
+
+Which Azure service allows you to extend Azure File Shares from the cloud to on-premises by creating a local cache of the files?
+
+A. azcopy
+
+B. Azure File Sync
+
+C. Azure AD Connect
+
+D. Azure Service Bus
+
+Correct Answer: B. Azure File Sync
+
+Explanation:
+
+Azure File Sync service allows you to keep a local copy of files that are stored in the Azure File Shares in the cloud. While some users may opt to keep a full copy of their data locally, Azure File Sync additionally has the ability to transform Windows Server into a quick cache of your Azure file share. You can use any protocol that's available on Windows Server to access your data locally, including SMB, NFS, and FTPS. You can have as many caches as you need across the world. Refer to Microsoft Doc: https://docs.microsoft.com/en-us/azure/storage/file-sync/file-sync-introduction
+
+Question:
+
+What advantage does a Spot VM provide over a regularly-provisioned VM?
+
+A. Spot instances are significantly cheaper
+
+B. Spot instances are specialized virtual machines available with single, multiple, or fractional GPUs
+
+C. Provides burstable performance, ideal for workloads that do not need the full performance of the CPU continuously
+
+D. Spot instances have a high CPU-to-memory ratio
+
+Correct Answer: A. Spot instances are significantly cheaper
+
+Explanation:
+
+Using Azure Spot Virtual Machines allows you to take advantage of our unused capacity at a significant cost savings. At any point in time when Azure needs the capacity back, the Azure infrastructure will evict Azure Spot Virtual Machines. Therefore, Azure Spot Virtual Machines are great for workloads that can handle interruptions like batch processing jobs, dev/test environments, large compute workloads, and more. Refer to Microsoft Doc: https://docs.microsoft.com/en-us/azure/virtual-machines/spot-vms
+
+Question:
+
+You are tasked with deploying a containerized application using Azure Container Instances (ACI). You want to ensure that your ACI instance has access to a specific Azure Storage account for persistent data storage. Which of the following configurations will allow your container to access the Azure Storage account when deployed?
+
+A. Create the ACI instance with the Azure Storage account's access key as a secret in the Azure Key Vault and configure the ACI instance to pull the secret at runtime
+
+B. Use a volume mount to mount an Azure File share from the Azure Storage account to the container when creating the ACI instance
+
+C. Create a new ACI instance with the `--cpu` and `--memory` parameters, and specify the storage account connection string in the container environment variables
+
+D. Deploy the ACI instance with the `--restart-policy` set to `Always`, and the storage account connection string provided as a command-line argument
+
+Correct Answer: B. Use a volume mount to mount an Azure File share from the Azure Storage account to the container when creating the ACI instance
+
+Explanation:
+
+Using a volume mount to mount an Azure File share from the Azure Storage account to the container when creating the ACI instance is the correct configuration to allow the container to access the Azure Storage account for persistent data storage. This method establishes a direct link between the container and the storage account, enabling seamless access to the required data.
+
+Question:
+
+Which Azure service provides the ability to store and manage your private Docker container images?
+
+A. Azure Container Instances
+
+B. Azure Container Registry (ACR)
+
+C. Azure Web Apps for Containers
+
+D. Azure Kubernetes Service
+
+Correct Answer: B. Azure Container Registry (ACR)
+
+Explanation:
+
+You can send your container images to Azure Container Registry (ACR) to store them before deployment
+
+Question:
+
+You have a Lifecycle Storage policy that moves blobs from hot storage to cool storage if they have not been modified in 30 days. You realize that there is a frequently accessed file that is in cool storage due to this policy, and you'd like to save money by moving it back to hot storage. So you manually move this file back to hot storage. Will this solve your problem?
+
+A. No, the blob will be automatically moved back to cool storage the next day
+
+B. Yes
+
+Correct Answer: A. No, the blob will be automatically moved back to cool storage the next day
+
+Explanation:
+
+Moving the blob from cool to hot does not modify it's modification date, and so it will be moved back to cool storage the next time lifecycle management runs. You need to either modify the rule to be based on last access date, or modify the file when moving it back so that the modification date is updated. Refer to Microsoft Doc: https://docs.microsoft.com/en-us/azure/storage/blobs/storage-lifecycle-management-concepts?tabs=azure-portal
+
+Question:
+
+You are configuring diagnostics logging for an Azure Web App. You want to ensure that all application logs, including trace logs and IIS logs, are stored in a centralized location for long-term retention and analysis. Which of the following Azure services should you use to achieve this?
+
+A. Azure Application Insights
+
+B. Azure Storage Account
+
+C. Azure Event Hubs
+
+D. Azure Log Analytics
+
+Correct Answer: B. Azure Storage Account
+
+Explanation:
+
+Azure Storage Account is the correct choice for storing application logs, including trace logs and IIS logs, in a centralized location for long-term retention and analysis. It provides a cost-effective and scalable solution for storing large amounts of data, making it suitable for storing logs generated by Azure Web Apps
+
+Question:
+
+The API Management Gateway includes a powerful feature called Policies. What is the main function of policies?
+
+A. Policies allow you to modify the behavior of the API using configuration instead of code. A policy can change both the inbound request and the outbound response
+
+B. Increase the security of your account by rejecting traffic coming in to the API by IP address
+
+C. You can set rules as to who has access to an API and who does not
+
+D. Policies allow you to direct the incoming traffic to several back-end APIs to help balance the load of the request
+
+Correct Answer: A. Policies allow you to modify the behavior of the API using configuration instead of code. A policy can change both the inbound request and the outbound response
+
+Explanation:
+
+Policies allow you to modify the inbound request as well as the outbound results without modifying the API code itself
+
+Question:
+
+When deploying an Azure Storage account, and you choose Zone Redundant Storage (ZRS), how many copies of your data does Azure keep?
+
+A. 1
+
+B. 3 copies in each Availability Zone
+
+C. 6
+
+D. 3
+
+Correct Answer: D. 3
+
+Explanation:
+
+Azure Storage always stores multiple copies of your data so that it is protected from planned and unplanned events, including transient hardware failures, network or power outages, and massive natural disasters. Redundancy ensures that your storage account meets its availability and durability targets even in the face of failures. Zone-redundant storage (ZRS) copies your data synchronously across three Azure availability zones in the primary region. For applications requiring high availability, Microsoft recommends using ZRS in the primary region, and also replicating to a secondary region. Refer to Microsoft Doc: https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy
+
+Question:
+
+Which feature of Azure functions allow you to use a runtime not currently supported natively by Azure?
+
+A. Durable Functions
+
+B. Serverless Functions
+
+C. SignalR
+
+D. Custom Handlers
+
+Correct Answer: D. Custom Handlers
+
+Explanation:
+
+Every Functions app is executed by a language-specific handler. While Azure Functions features many language handlers by default, there are cases where you may want to use other languages or runtimes. Custom handlers are lightweight web servers that receive events from the Functions host. Any language that supports HTTP primitives can implement a custom handler. Refer to Microsoft Doc: https://docs.microsoft.com/en-us/azure/azure-functions/functions-custom-handlers
+
+Question:
+
+For Windows App Services, where can you choose to have logging saved to?
+
+A. File system, and blob storage
+
+B. File system, blob storage, and Windows Event Log
+
+C. File system only
+
+D. File system, blob storage, and SQL Database
+
+Correct Answer: A. File system, and blob storage
+
+Explanation:
+
+To route messages to log files, Azure Web apps use the Web server (IIS process). Because Windows-based Web apps are a well-established Azure service, and messaging for ASP.NET apps is tightly integrated with the underlying IIS service, Windows apps benefit from a rich logging infrastructure. For other apps, logging options may be limited by the development platform, even when running on a Windows app service. Refer to Microsoft Doc: https://docs.microsoft.com/en-us/learn/modules/capture-application-logs-app-service/2-enable-and-configure-app-service-application-logging
+
+Question:
+
+You would like to receive an email every time a new Azure Container Registry is created. Which of the following steps would accomplish that goal?
+
+A. Using Azure Event Grid, you can connect into the Azure subscription to receive alerts for resources created. The Event Grid can filter those events to only Azure Container Registry, and call a Function.
+
+B. Create an Azure Automation Runbook that checks your Account every 15 minutes for new resources and alerts you as new ones are created.
+
+C. Go into Azure Monitor. Go into Alerts. Select the Subscription scope. Select the Create or Update Container Registry signal. Add the action group that emails you. Give it a name and click save.
+
+D. Azure Service Health can monitor your Azure account and Alert you when new resources are created on your account.
+
+Correct Answer: C. Go into Azure Monitor. Go into Alerts. Select the Subscription scope. Select the Create or Update Container Registry signal. Add the action group that emails you. Give it a name and click save.
+
+Explanation:
+
+Azure Monitor can do this natively. You can create an Alert in Azure Monitor, based on the Create or Update Container Registry signal. Refer to Microsoft Doc: https://docs.microsoft.com/en-us/azure/container-registry/monitor-service
+
+Question:
+
+You have an Azure Container Registry named 'contoso.azurecr.io'. There are several departments in your company that need to push images to the registry, and you want to keep them organized. You decide to use repository namespaces to separate out 'sales', 'marketing', 'technology' and 'customerservice'. How do you pull down the container image for the 'website' project located in the marketing namespace?
+
+A. docker pull contoso.azurecr.io -location marketing/website
+
+B. docker pull contoso.azurecr.io/marketing/website
+
+C. docker pull marketing.contoso.azurecr.io/website
+
+D. docker pull contoso.azurecr.io -path marketing -project website
+
+Correct Answer: B. docker pull contoso.azurecr.io/marketing/website
+
+Explanation:
+
+By using repository namespaces, you can allow sharing a single registry across multiple groups within your organization. Registries can be shared across deployments and teams. Azure Container Registry supports nested namespaces, enabling group isolation. However, the registry manages all repositories independently, not as a hierarchy. The syntax is contoso.azurecr.io/marketing/website 
+Refer to Microsoft Doc: https://docs.microsoft.com/en-us/azure/container-registry/container-registry-best-practices#repository-namespaces
+
+Question:
+
+How many input bindings is an Azure Function allowed to have?
+
+A. 0 or 1
+
+B. Any number or zero
+
+C. 1 or more
+
+D. 1
+
+Correct Answer: B. Any number or zero
+
+Explanation:
+
+You can mix and match different bindings to suit your needs. Bindings are optional and a function might have one or multiple input and/or output bindings. Refer to Microsoft Doc: https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings?tabs=csharp
+
+Question:
+
+What does the CLI command 'az acr build --registry $ACR_NAME --image helloacrtasks:v1 .' do?
+
+A. Creates a new ACR resource if one doesn't exist under that name, otherwise does nothing
+
+B. Creates a new ACR resource if one doesn't exist under that name, or deletes the images from the existing resource
+
+C. Performs a docker build and immediately pushes the result image into an ACR.
+
+D. Performs a docker build and keeps the image on the local machine
+
+Correct Answer: C. Performs a docker build and immediately pushes the result image into an ACR.
+
+Explanation:
+
+ACR Tasks is a suite of features within Azure Container Registry that provides streamlined and efficient Docker container image builds in Azure. az acr build is an ACR Task which queues a quick build, providing streaming logs for an Azure Container Registry. Refer to Microsoft Doc: https://docs.microsoft.com/en-us/azure/container-registry/container-registry-tutorial-quick-task
+
+Question:
+
+Which of the following statements describes the type of data that can be retrieved using Microsoft Graph?
+
+A. All of the data contained in Microsoft 365, including documents, calendar, email, Teams, and people.
+
+B. All of your Azure resources and resource groups, including deployment history and activity logs
+
+C. Document data, such as JSON or XML
+
+D. Columnar data, such as a spreadsheet or relational data table
+
+Correct Answer: A. All of the data contained in Microsoft 365, including documents, calendar, email, Teams, and people.
+
+Explanation:
+
+Microsoft Graph is the gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access the tremendous amount of data in Microsoft 365, Windows 10, and Enterprise Mobility + Security. Microsoft Graph exposes REST APIs and client libraries to access data on the following Microsoft cloud services: (A) Microsoft 365 core services: Bookings, Calendar, Delve, Excel, Microsoft 365 compliance eDiscovery, Microsoft Search, OneDrive, OneNote, Outlook/Exchange, People (Outlook contacts), Planner, SharePoint, Teams, To Do, Workplace Analytics. (B) Enterprise Mobility and Security services: Advanced Threat Analytics, Advanced Threat Protection, Azure Active Directory, Identity Manager, and Intune. (C) Windows 10 services: activities, devices, notifications, Universal Print. (D) Dynamics 365 Business Central. Refer to Microsoft Doc: https://docs.microsoft.com/en-us/graph/overview#whats-in-microsoft-graph
+
+Question:
+
+What is the Azure CLI command to download application log files to the local disk?
+
+A. az log download
+
+B. az webapp log tail
+
+C. az webapp log download
+
+D. az webapp log
+
+Correct Answer: C. az webapp log download
+
+Explanation:
+
+az webapp log download allows you to download the logs to your local disk. Refer to Microsoft Doc: https://docs.microsoft.com/en-us/learn/modules/capture-application-logs-app-service/2-enable-and-configure-app-service-application-logging
+
+Question:
+
+Your company has several applications running on Azure App Services - App1, App2, App3 and App4. Each application is configured to use a system-managed identity to access resources. Your applications all store their secrets in a KeyVault named KV1. You are finding it difficult to manage the permissions for all these applications, and would like to move to a single managed identity for all applications instead of each application having their own. What action do you take to implement that?
+
+A. Create one user in Azure Active Directory for each application, and have the applications use that
+
+B. Create one user in Azure Active Directory for all applications, and have the applications use that
+
+C. Change the applications to the same user-managed identity
+
+D. Change the applications to the same system-managed identity
+
+Correct Answer: C. Change the applications to the same user-managed identity
+
+Explanation:
+
+Managed identities eliminate the need for developers to manage credentials. Managed identities provide an identity for applications to use when connecting to resources that support Azure Active Directory (Azure AD) authentication. Applications may use the managed identity to obtain Azure AD tokens. For example, an application may use a managed identity to access resources like Azure Key Vault where developers can store credentials in a secure manner or to access storage accounts. You cannot configure multiple applications to use the same system-assigned identity. You must use a user-assigned identity for this purpose. Refer to Microsoft Doc: https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview
+
+Question:
+
+You are tasked with creating a Docker image for a .NET Core application and deploying it to Azure Container Instances. Which command would you use to build the Docker image from the Dockerfile located in your current directory and tag it as "myapp:v1"?
+
+A. docker image build -t myapp:v1 .
+
+B. docker run -t myapp:v1 .
+
+C. docker create -t myapp:v1 .
+
+D. docker build -t myapp:v1 .
+
+Correct Answer: D. docker build -t myapp:v1 .
+
+Explanation:
+
+The correct command to build a Docker image from a Dockerfile located in the current directory and tag it as "myapp:v1" is "docker build -t myapp:v1 .". The "-t" flag is used to specify the tag for the image, and the "." indicates the current directory where the Dockerfile is located.
+
+Question:
+
+The speed of an Azure Event Hub is determined by the number of Throughput units you reserve for it. You can set between 1 and 20 throughput units for the Event Hub. How fast does 1 throughput unit represent for data coming in to an Event Hub?
+
+A. 1 throughput unit is one event per second
+
+B. 1 MB per second or 1000 events per second (whichever comes first)
+
+C. 1000 events per second
+
+D. 1 GB per second
+
+Correct Answer: B. 1 MB per second or 1000 events per second (whichever comes first)
+
+Explanation:
+
+1 MB per second or 1000 events per second (whichever comes first)
+
+Question:
+
+Which CosmosDB API format works best with document (JSON) data?
+
+A. Graph API
+
+B. Cassandra API
+
+C. Core SQL
+
+D. MongoDB API
+
+Correct Answer: C. Core SQL
+
+Explanation:
+
+Core (SQL) API stores data in JSON document format. Cassandra API stores data in column-oriented schema. Gremlin API allows users to make graph queries and stores data as edges and vertices. MongoDB API also uses documents but is BSON format, which is a binary format and not text-based. Refer to Microsoft Doc: https://docs.microsoft.com/en-us/azure/cosmos-db/introduction
+
+Question:
+
+You are developing an Azure application that stores images in Azure Blob Storage. You need to set custom metadata on a blob to track the image's resolution and color profile. Which of the following code snippets correctly sets the metadata for a blob in C#?
+
+A. 
+
+// csharp
+await blobClient.UploadAsync(fileStream);
+blobClient.Metadata["Resolution"] = "1920x1080";
+blobClient.Metadata["ColorProfile"] = "sRGB";
+await blobClient.SetMetadataAsync();
+
+B.
+
+// csharp
+await blobClient.SetPropertiesAsync(new BlobHttpHeaders
+{
+    ContentType = "image/jpeg"
+});
+
+C.
+
+// csharp
+var metadata = new Dictionary<string, string>
+{
+    { "Resolution", "1920x1080" },
+    { "ColorProfile", "sRGB" }
+};
+await blobClient.UploadAsync(fileStream, new BlobHttpHeaders(), metadata);
+
+D.
+
+// csharp
+await blobClient.SetMetadataAsync(new Dictionary<string, string>
+{
+    { "Resolution", "1920x1080" },
+    { "ColorProfile", "sRGB" }
+});
+
+Correct Answer: 
+
+D. // csharp
+await blobClient.SetMetadataAsync(new Dictionary<string, string>
+{
+    { "Resolution", "1920x1080" },
+    { "ColorProfile", "sRGB" }
+});
+
+Explanation:
+
+This code snippet correctly sets custom metadata on a blob by using the SetMetadataAsync method of the blob client. It creates a dictionary with key-value pairs for the resolution and color profile, allowing you to track this information for the image stored in Azure Blob Storage.
+
+Question:
+
+Which type of data can most benefit from being stored in a caching system like Azure Redis Cache?
+
+A. Data that is infrequently read but is static
+
+B. Data that is repeatedly read, and can return a different value every time
+
+C. Data that is repeatedly written
+
+D. Data that is repeatedly read
+
+Correct Answer: D. Data that is repeatedly read
+
+Explanation:
+
+Data that is static but read frequently benefits most from being cached, because you can use the cache to retrieve the data instead of having to go back to the original data source every time. Data that is written and never read does not need to be cached since caching only benefits reading. Data that is always changing (like a stock price) cannot be cached since you always have to go back to the original source to retrieve the latest. Data that is infrequently read but is static can benefit from caching, but it does not benefit the most of the four options. Refer to Microsoft Doc: https://docs.microsoft.com/en-us/azure/architecture/best-practices/caching?toc=%2fazure%2fredis-cache%2ftoc.json
+
+Question:
+
+If your Azure solution relies on third-party public images, some risks are added to your process. Microsoft recommends keeping a private copy of public images and deploying from there, instead of deploying directly from public image locations like DockerHub. Which CLI command is able to copy a public image into Azure Container Registry?
+
+A. git clone
+
+B. docker compose
+
+C. az acr import
+
+D. az acr copy
+
+Correct Answer: C. az acr import
+
+Explanation:
+
+As a recommended one-time step, import base images and other public content to your Azure container registry. The az acr import command in the Azure CLI supports image import from public registries such as Docker Hub and Microsoft Container Registry and from other private container registries. Refer to Microsoft Doc: https://docs.microsoft.com/en-ca/azure/container-registry/buffer-gate-public-content#import-images-to-an-azure-container-registry
+
+Question:
+
+You are developing an Azure web application that requires user authentication. You decide to use Microsoft Entra ID for authentication purposes. Which of the following approaches should you use to implement user authentication in your application?
+
+A. Use the Microsoft Entra External ID service (formerly Azure AD B2C) to create a custom policy for user authentication.
+
+B. Implement a self-hosted OpenID Connect provider for user authentication.
+
+C. Use the Microsoft Graph API to directly validate user credentials at runtime.
+
+D. Configure the application to use Microsoft Entra ID as an identity provider through OpenID Connect or OAuth 2.0.
+
+Correct Answer: D. Configure the application to use Microsoft Entra ID as an identity provider through OpenID Connect or OAuth 2.0.
+
+Explanation:
+
+Configuring the application to use Microsoft Entra ID as an identity provider through OpenID Connect or OAuth 2.0 is the correct approach for implementing user authentication in an Azure web application. This method allows the application to leverage the authentication capabilities provided by Microsoft Entra ID securely.
+
+Question:
+
+You have a Timer Trigger Function that uses "0 15,30,45 0 * * *" as it's timer setting. How often will the function run?
+
+A. Every 15 minutes, every hour of the day
+
+B. At 15 minutes, 30 minutes, and 45 minutes past every hour of the day
+
+C. Every 15 seconds, every minute of the day
+
+D. At 00:15, 00:30, and 00:45 (12:15am, 12:30am, and 12:45am); three times per day only.
+
+Correct Answer: D. At 00:15, 00:30, and 00:45 (12:15am, 12:30am, and 12:45am); three times per day only.
+
+Explanation:
+
+CRON uses a "{second} {minute} {hour} {day} {month} {day-of-week}" format for expressions. The first "0" means that it runs when the second equals 0. The second "15,30,45" means when the minutes equal 15, 30 and 45. The third "0" means at midnight. So the answer is at 12:15, 12:30, and 12:45 every day. Refer to Microsoft Doc: https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-timer?tabs=csharp#ncrontab-expressions
+
+Question:
+
+You are developing an Azure application that uses Application Insights for monitoring. You need to configure custom telemetry to track specific business events, such as when a user completes a purchase. Which of the following methods should you use to send custom events to Application Insights?
+
+A. TrackException
+
+B. TrackTrace
+
+C. TrackMetric
+
+D. TrackEvent
+
+Correct Answer: D. TrackEvent
+
+Explanation:
+
+The TrackEvent method is the correct choice for sending custom events to Application Insights. This method allows you to track specific business events, such as user interactions like completing a purchase. It is ideal for capturing important business metrics and monitoring user behavior.
+
+Question:
+
+You have a docker image in your local repository that you'd like to share with the Azure Container Register. Your local repository image is named myimage, and your ACR is named myacr.azurecr.io. What is the command to get the image from your local into ACR?
+
+A. docker save myimage
+
+B. docker push myacr.azurecr.io/myimage
+
+C. docker build myacr.azurecr.io/myimage
+
+D. docker push azurecr.io/myacr/myimage
+
+Correct Answer: B. docker push myacr.azurecr.io/myimage
+
+Explanation:
+
+Use docker image push to share your images to the Docker Hub registry or a self-hosted one. You pass the URL of your ACR, which is in the format youruniquename.azurecr.io, plus the image name. 
+Refer to Microsoft Doc: https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-docker-cli?tabs=azure-cli#push-the-image-to-your-registry
+
+Question:
+
+What option do you have to grant someone access to a single container in your Azure storage account without having to give them your storage account keys?
+
+A. Create for them a Shared Access Signature (SAS)
+
+B. Recycle the storage account keys after giving one to them
+
+C. Grant their user contributor access to your storage account within your subscription
+
+D. Change the permission settings for the container to public
+
+Correct Answer: A. Create for them a Shared Access Signature (SAS)
+
+Explanation:
+
+Storage accounts are access by keys. Using SAS will let them have very granular access without exposing any other part of your storage account.
+
+Question:
+
+You are a developer for Acme Inc. You have implemented Redis as a caching service, and it's going great. You are running on a premium plan and using the top 120 GB of memory cache. You'd like to increase the memory limit to 500 GB, but Redis does not support that. How can you get more memory when using Azure Redis? Choose the best answer.
+
+A. Create a second Redis server and modify your application to shard your storage between the two locations.
+
+B. Implement the Redis auto-scaling feature to automatically add and remove Redis nodes when demand exceeds 120 GB.
+
+C. Implement the Redis Cluster feature, and add a second shard to double the memory available.
+
+D. If you attempt to store more than 120 GB of data in the memory cache, you're probably doing something wrong. Best to use an Azure SQL Database for that.
+
+Correct Answer: C. Implement the Redis Cluster feature, and add a second shard to double the memory available.
+
+Explanation: Redis Cluster supports up to 10 shards to create 1.2 TB of memory.
+
+Question:
+
+You need to modify an ARM template. You would like the location of the Azure resources to be in the same region as the resource group itself. Which ARM template function meets the criteria?
+
+A. [parameters('location')]
+
+B. [environment()]
+
+C. [resourceGroup().location]
+
+D. [subscription().location]
+
+Correct Answer: C. [resourceGroup().location]
+
+Explanation:
+
+[resourceGroup().location] is the best answer because it accesses the resource group, and looks at the location parameter. The other answers do not do that. We don't know if the location is passed in as a parameter, and the requirement said the resource group location. Refer to Microsoft Doc: https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-functions-resource#resourcegroup
+
+Question:
+
+You are developing an Azure Function App that needs to log detailed execution information for troubleshooting purposes. Which of the following methods should you use to implement logging in your Azure Function?
+
+A. Configure Application Insights and use the TelemetryClient to send custom events and log messages.
+
+B. Set the logging level to "Verbose" in the function's host.json file to capture all execution details.
+
+C. Use Azure Blob Storage to store log files generated by the function execution.
+
+D. Use the `Console.WriteLine` method to log messages to the console.
+
+Correct Answer: A. Configure Application Insights and use the TelemetryClient to send custom events and log messages.
+
+Explanation:
+
+Configuring Application Insights and using the TelemetryClient to send custom events and log messages is the correct method to implement logging in your Azure Function. Application Insights provides a centralized platform for monitoring and logging, allowing you to track detailed execution information, analyze performance, and troubleshoot issues effectively.
+
+Question:
+
+Azure Functions store their configuration settings in which file?
+
+A. function.json
+
+B. index.js
+
+C. web.config
+
+D. default.js
+
+Correct Answer: A. function.json
+
+Explanation:
+
+The function.json file defines the function's trigger, bindings, and other configuration settings. Every function has one and only one trigger. The runtime uses this config file to determine the events to monitor and how to pass data into and return data from a function execution. The following is an example function.json file. Refer to Microsoft Doc: https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings?tabs=csharp
+
+Question:
+
+You are developing an application that interacts with Azure Cosmos DB using the .NET SDK. You want to retrieve a specific item from a container based on its unique identifier. Which of the following methods should you use to achieve this?
+
+A. ReadItemAsync<T>(string id, PartitionKey partitionKey)
+
+B. QueryItemsAsync<T>(string query, QueryRequestOptions requestOptions)
+
+C. GetItemQueryIterator<T>(string query)
+
+D. GetItemAsync<T>(string id, PartitionKey partitionKey)
+
+Correct Answer: A. ReadItemAsync<T>(string id, PartitionKey partitionKey)
+
+Explanation:
+
+The ReadItemAsync method is specifically designed to retrieve a specific item from a container based on its unique identifier and partition key in Azure Cosmos DB using the .NET SDK. This method is the correct choice for achieving the desired functionality.
+
+Question:
+
+You are a developer for Acme Inc. Your company's flagship application is the Wind Monitoring software that Wind Energy farms use to monitor their equipment. At the end of each day, the Wind Collector sends a message that contains all of the days statistics in JSON format which needs to be read, processed, and posted to the database. Which Azure Service is best for processing this type of data?
+
+A. Event Hub
+
+B. IoT Hub
+
+C. Service Bus
+
+D. Storage Queues
+
+Correct Answer: C. Service Bus
+
+Explanation:
+
+Service Bus Queue is enterprise-grade message queue.
+
+Question:
+
+ARM templates are said to have a declarative syntax. Why is a declarative syntax better than a programmatic approach?
+
+A. Declarative syntax only requires minor changes to the code before each deployment to ensure uniqueness
+
+B. Programmatic approach does not support advanced techniques such as loops, variables, parameters, and random resource names
+
+C. You don't have to check if the resource exists, you simply declare that it should exist
+
+D. Declarative syntax compiles into a binary form and is quicker to deploy
+
+Correct Answer: C. You don't have to check if the resource exists, you simply declare that it should exist
+
+Explanation:
+
+ARM templates allow you to create and deploy an entire Azure infrastructure declaratively. For example, you can deploy not only virtual machines but also the network infrastructure, storage systems, and any other resources you may need. 
+Refer to Microsoft Doc: https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/overview
